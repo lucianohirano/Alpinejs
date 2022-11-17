@@ -8,9 +8,17 @@
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 <body>
-    <div x-data="{hello:'Olá mundo'}">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus pariatur atque recusandae, nemo optio quia totam quibusdam. Dolores totam quaerat consectetur illo maiores unde, ullam aliquid ut pariatur expedita. Officia!
+    <div x-data="{
+        open:true,
+        hello:'Olá Mundo AlpineJS'
+        }">
+        
         <h1 x-text="hello"></h1>
+        <p x-show="open">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus pariatur atque recusandae, nemo optio quia totam quibusdam. Dolores totam quaerat consectetur illo maiores unde, ullam aliquid ut pariatur expedita. Officia!
+        </p>
+        <button type="button" x-on:click="open=!open">mostrar/ocultar</button>
+        
     </div>
 </body>
-</html>
+</html> 
